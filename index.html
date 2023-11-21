@@ -1,10 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Workout Helper</title>
 </head>
 <body>
-
+<main>
+    <h1>Workout helper</h1>
+    <label for="workout">What muscle group or part of your body, do you want to train?</label>
+    <input id="workout" type="text">
+    <button>Click here</button>
+    <span class="hidden loading">loading</span>
+    <p class="suggestions"></p>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</main>
 </body>
 </html>

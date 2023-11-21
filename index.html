@@ -10,14 +10,33 @@
 </head>
 <body>
 <main>
+    <section>
     <h1>Workout helper</h1>
     <label for="workout">What muscle group or part of your body, do you want to train?</label>
     <input id="workout" type="text">
     <button>Click here</button>
     <span class="hidden loading">loading</span>
     <p class="suggestions"></p>
-    <script src="utils.js"></script>
-    <script src="main.js"></script>
+    </section>
+
+    <section>
+        <h1>Plan your workout</h1>
+        <h2>What kind of workout program, do you want to train?</h2>
+        <input id="2-day-split" type="radio" name="days">
+        <label for="2-day-split">2 day split</label>
+        <input id="3-day-split" type="radio" name="days">
+        <label for="3-day-split"> 3 day split</label>
+        <input id="4-day-split" type="radio" name="days">
+        <label for="4-day-split"> 4 day split</label>
+        <label id="time-label" for="time">How long do you want to train?</label>
+        <input id="time" type="number" placeholder="In min.">
+        <label id="focus-muscle-group-label" for="focus-muscle-group">Do you have a muscle group, you want to focus more on?</label>
+        <input id="focus-muscle-group" type="text" placeholder="Focused muscle group">
+        <button>Click Here</button>
+    </section>
 </main>
+
+<script src="utils.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
 .hidden {
     display: none;
 }
+
+#time, #time-label, #focus-muscle-group, #focus-muscle-group-label{
+    display: block;
+}
+

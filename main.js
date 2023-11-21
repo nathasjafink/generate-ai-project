@@ -34,8 +34,10 @@ const pTag = document.querySelector('p');
 const loadingSpan = document.querySelector('span.loading')
 button.addEventListener("click", () => {
     loadingSpan.classList.remove('hidden');
-    getGeneratedText(`The following is a list of 10 exercises for: ${input.value}`)
+    getGeneratedText(`The following is a list of 10 exercises for: ${input.value}` )
         .then(generatedText => {
             pTag.innerText = generatedText;
+            loadingSpan.classList.add('hidden');
         });
+
 });

@@ -28,7 +28,7 @@ button.addEventListener("click", () => {
         });
 });*/
 
-const button = document.querySelector('button');
+const button = document.querySelector('.btn1');
 const input = document.querySelector('input');
 const pTag = document.querySelector('p');
 const loadingSpan = document.querySelector('span.loading')
@@ -41,3 +41,6 @@ button.addEventListener("click", () => {
         });
 
 });
+
+const btnForPlanner = document.querySelector('.btn2');
+const output = document.querySelector('.workout-plan');

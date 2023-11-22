@@ -19,7 +19,7 @@ function fetchText(query) {
         "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct",
         {
             headers: {
-                Authorization: `Bearer ${HUGGINGFACE_TOKEN}`,
+            Authorization: `Bearer ${HUGGINGFACE_TOKEN}`,
                 "Content-Type": "application/json",
             },
             method: "POST",

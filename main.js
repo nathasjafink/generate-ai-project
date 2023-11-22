@@ -44,3 +44,44 @@ button.addEventListener("click", () => {
 
 const btnForPlanner = document.querySelector('.btn2');
 const output = document.querySelector('.workout-plan');
+const twoDaySplit = document.querySelector('#day-split-2 ');
+const threeDaySplit = document.querySelector('#day-split-3');
+const fourDaySplit = document.querySelector('#day-split-4');
+const inputMin = document.querySelector('#time');
+const inputMuscleGroup = document.querySelector('#focus-muscle-group');
+
+btnForPlanner.addEventListener('click', async () => {
+    const selectedProgram = getSelectedProgram();
+    const trainingTime = inputMin.value;
+    const focusedMuscleGroup = funcFocusedMuscleGroup();
+
+
+    getGeneratedText(`The following is a workout plan and show the different exercises you can do for your workout: ${selectedProgram}, ${trainingTime}, ${focusedMuscleGroup}` )
+        .then(generatedText => {
+            output.innerText = generatedText;
+        });
+});
+
+function getSelectedProgram () {
+    if (twoDaySplit.checked) {
+        return '2 day split';
+    } else if (threeDaySplit.checked) {
+        return '3 day split';
+    } else if (fourDaySplit.checked) {
+        return '4 day split';
+    } else {
+        return 'No program selected';
+    }
+}
+
+function funcFocusedMuscleGroup () {
+    const input = inputMuscleGroup.value
+    if (input) {
+        return input;
+    } else {
+        return 'No focused muscle group has been added'
+    }
+}
+
+
+

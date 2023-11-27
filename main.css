@@ -2,7 +2,52 @@
     display: none;
 }
 
-#time, #time-label, #focus-muscle-group, #focus-muscle-group-label{
-    display: block;
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
+main {
+    text-align: center;
+}
+
+h1{
+    font-size: 35px;
+}
+
+#workout-helper,
+#workout-planner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+#workout-helper label,
+#workout-helper input,
+#workout-helper button,
+#workout-helper span,
+#workout-helper p,
+#workout-planner h1,
+#workout-planner h2,
+#workout-planner label,
+#workout-planner input,
+#workout-planner button,
+#workout-planner span,
+#workout-planner p {
+    margin: 5px 0;
+}
+
+#workout-planner {
+    margin-top: 40px;
+}
+
+
+#workout-planner input[type="radio"] + label {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}

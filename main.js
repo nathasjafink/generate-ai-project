@@ -51,6 +51,7 @@ const inputMin = document.querySelector('#time');
 const inputMuscleGroup = document.querySelector('#focus-muscle-group');
 
 btnForPlanner.addEventListener('click', async () => {
+    loadingSpan.classList.remove('hidden-2');
     const selectedProgram = getSelectedProgram();
     const trainingTime = inputMin.value;
     const focusedMuscleGroup = funcFocusedMuscleGroup();
@@ -59,6 +60,7 @@ btnForPlanner.addEventListener('click', async () => {
     getGeneratedText(`The following is a workout plan and show the different exercises you can do for your workout: ${selectedProgram}, ${trainingTime}, ${focusedMuscleGroup}` )
         .then(generatedText => {
             output.innerText = generatedText;
+            loadingSpan.classList.add('hidden-2');
         });
 });
 
